@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: ${DEV_DATABASE_MYSQL_PASSWORD}
+    url: jdbc:mysql://localhost:3306/sagachoreography
+    username: ${DEV_DATABASE_MYSQL_USERNAME}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+        format_sql: true
+    show-sql: true
+  cloud:
+    stream:
+      function:
+        definition: orderSupplier
+      bindings:
+        orderSupplier-out-0:
+          destination: order-event
+
+server:
+  port: 8081
