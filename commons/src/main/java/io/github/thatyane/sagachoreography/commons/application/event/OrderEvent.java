@@ -2,13 +2,14 @@ package io.github.thatyane.sagachoreography.commons.application.event;
 
 import io.github.thatyane.sagachoreography.commons.application.dto.OrderRequest;
 import io.github.thatyane.sagachoreography.commons.application.dto.enums.OrderStatus;
-import lombok.Builder;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
 
 @NoArgsConstructor
+@Getter
 public class OrderEvent implements Event {
 
     private UUID eventId = UUID.randomUUID();

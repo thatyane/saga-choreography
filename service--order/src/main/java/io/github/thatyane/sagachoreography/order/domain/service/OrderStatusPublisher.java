@@ -13,7 +13,7 @@ public class OrderStatusPublisher {
 
     private final Sinks.Many<OrderEvent> orderSinks;
 
-    public void publisher(OrderRequest orderRequest, OrderStatus orderStatus) {
+    public void publish(OrderRequest orderRequest, OrderStatus orderStatus) {
         OrderEvent orderEvent = new OrderEvent(orderRequest, orderStatus);
         orderSinks.tryEmitNext(orderEvent);
     }

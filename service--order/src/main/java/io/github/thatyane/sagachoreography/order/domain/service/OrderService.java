@@ -24,12 +24,11 @@ public class OrderService {
                 .productId(orderRequest.getProductId())
                 .userId(orderRequest.getUserId())
                 .orderStatus(ORDER_CREATED)
-                .price(orderRequest.getAmount())
+                .amount(orderRequest.getAmount())
                 .build());
 
         orderRequest.setOrderId(purchaseOrder.getId());
-
-        orderStatusPublisher.publisher(orderRequest, ORDER_CREATED);
+        orderStatusPublisher.publish(orderRequest, ORDER_CREATED);
 
         return purchaseOrder;
     }

@@ -2,12 +2,16 @@ package io.github.thatyane.sagachoreography.commons.application.event;
 
 import io.github.thatyane.sagachoreography.commons.application.dto.PaymentRequest;
 import io.github.thatyane.sagachoreography.commons.application.dto.enums.PaymentStatus;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
 
 @NoArgsConstructor
+@Getter
 public class PaymentEvent implements Event {
 
     private UUID eventId = UUID.randomUUID();
@@ -28,5 +32,9 @@ public class PaymentEvent implements Event {
     @Override
     public LocalDateTime getEventDate() {
         return this.eventDate;
+    }
+
+    public Long getPaymentRequestOrderId() {
+        return paymentRequest.getOrderId();
     }
 }
