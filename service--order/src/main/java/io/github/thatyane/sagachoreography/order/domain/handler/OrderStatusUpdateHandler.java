@@ -1,4 +1,4 @@
-package io.github.thatyane.sagachoreography.order.infrastructure.config;
+package io.github.thatyane.sagachoreography.order.domain.handler;
 
 import io.github.thatyane.sagachoreography.commons.application.dto.OrderRequest;
 import io.github.thatyane.sagachoreography.commons.application.dto.enums.OrderStatus;

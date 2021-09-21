@@ -1,6 +1,7 @@
 package io.github.thatyane.sagachoreography.order.infrastructure.config;
 
 import io.github.thatyane.sagachoreography.commons.application.event.PaymentEvent;
+import io.github.thatyane.sagachoreography.order.domain.handler.OrderStatusUpdateHandler;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
